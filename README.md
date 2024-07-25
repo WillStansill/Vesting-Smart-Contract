@@ -22,8 +22,7 @@ Installation
 Clone the repository:
 
 bash
-git clone <repository-url>
-cd <repository-directory>
+git clone <https://github.com/WillStansill/Vesting-Smart-Contract>
 Install the necessary dependencies:
 
 bash
@@ -72,7 +71,7 @@ make deploy network=sepolia
 make deploy network=mainnet
 Usage
 Start Vesting: Call startVesting() to initialize the vesting period.
-Add Beneficiary: Use addBeneficiary(address _beneficiary, Role _role, uint256 _totalAllocation) to add beneficiaries with their respective allocations.
+Add Beneficiary: Use addBeneficiary(address \_beneficiary, Role \_role, uint256 \_totalAllocation) to add beneficiaries with their respective allocations.
 Claim Tokens: Beneficiaries can call claimTokens() to claim their vested tokens once the cliff period is over.
 Contract Details
 VestingContract.sol: Implements the vesting logic with role-based allocations and token claiming.
@@ -88,7 +87,7 @@ VestingContract vestingContract = new VestingContract(tokenAddress);
 vestingContract.startVesting();
 
 // Adding a beneficiary
-vestingContract.addBeneficiary(userAddress, VestingContract.Role.User, 1000 * 10 ** 18);
+vestingContract.addBeneficiary(userAddress, VestingContract.Role.User, 1000 \* 10 \*\* 18);
 
 // Claiming tokens
 vestingContract.claimTokens();
